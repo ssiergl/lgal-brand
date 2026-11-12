@@ -5,8 +5,9 @@
 <p align="center"><img src="logo/lgal-plaque.svg" width="240" alt="LG Aquatic Life"></p>
 
 Logo und Markendateien von **LG Aquatic Life**, gemeinsam für alle LG-Aquatic-Life-Geräte
-(LGAL-Doser und spätere). Dieses Repository ist die einzige Quelle: Die Produkt-Repositories
-enthalten Kopien der fertigen Dateien, die sie brauchen, nicht dieses Repository.
+(LGAL Doser und spätere). Dieses Repository ist die einzige Quelle: Die Produkt-Repositories
+binden es als Git-Submodul ein (auf einen Stand festgelegt, übernommen mit
+`git submodule update --remote`) und verlinken darauf; sie enthalten keine Kopien des Logos.
 
 Das Logo ist **nicht** Open Source. Siehe [TRADEMARKS.de.md](TRADEMARKS.de.md).
 
@@ -17,6 +18,7 @@ Das Logo ist **nicht** Open Source. Siehe [TRADEMARKS.de.md](TRADEMARKS.de.md).
 | `logo/lgal-plaque.svg` | **Das Logo.** Runde Navy-Plakette mit transparenten Ecken; passt auf hellen und dunklen Hintergrund. |
 | `logo/lgal-badge.svg` | Dasselbe auf einem Navy-Quadrat mit abgerundeten Ecken: Avatare, Bilder für soziale Netze. |
 | `export/*.png` | PNG-Fassungen: Plakette 256/512/1024 px, Badge 1024 px. |
+| `export/lgal-doser-social.png` | Vorschaubild des LGAL-Doser-Repositorys (1280 × 640 px, in den GitHub-Einstellungen hochladen). |
 | `source/original.jpg` | Das Original. |
 | `source/original.png` | Dasselbe, verlustfrei dekodiert: Eingabe der Werkzeuge. |
 | `tools/`, `make.sh` | Bauen die SVG-Dateien aus dem Original neu. |
@@ -70,16 +72,16 @@ Original, grün = nur neu).
 ## Vorschaubild eines Produkt-Repositorys
 
 ```bash
-.venv/bin/python tools/social.py logo/lgal-plaque.svg "LGAL-Doser" "Open dosing pump|for reef aquariums" social-preview.png
+.venv/bin/python tools/social.py logo/lgal-plaque.svg "LGAL Doser" "Professional smart|open-source dosing pump|for reef aquariums" export/lgal-doser-social.png
 ```
 
-1280 × 640 px; `|` beginnt eine neue Zeile. Die Schrift ist Montserrat, falls installiert,
+`make.sh` macht das als letzten Schritt. 1280 × 640 px; `|` beginnt eine neue Zeile. Die Schrift ist Montserrat, falls installiert,
 sonst Avenir Next, Helvetica Neue oder Arial.
 
 ## Verwendet in
 
 | Repository | Dateien |
 |---|---|
-| LGAL-Doser | `lgal-plaque.svg` auf den Anmelde- und Einrichtungsseiten der Web-UI, abgedimmt im Hintergrund der Web-UI und im README, Vorschaubild |
+| LGAL Doser | Submodul `brand/`: `lgal-plaque.svg` in die Firmware eingebaut (Anmelde-, Einrichtungs- und Wartungsseite, abgedimmt im Hintergrund der Web-UI); das README verlinkt darauf; `export/lgal-doser-social.png` als Vorschaubild |
 
 Copyright © 2026 Lars Greiss / LG Aquatic Life. Alle Rechte vorbehalten.

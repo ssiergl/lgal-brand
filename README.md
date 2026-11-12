@@ -4,9 +4,10 @@
 
 <p align="center"><img src="logo/lgal-plaque.svg" width="240" alt="LG Aquatic Life"></p>
 
-Logo and brand files of **LG Aquatic Life**, shared by all LG Aquatic Life devices (LGAL-Doser
-and later ones). This repository is the single source: the product repositories contain copies
-of the finished files they need, not this repository.
+Logo and brand files of **LG Aquatic Life**, shared by all LG Aquatic Life devices (LGAL Doser
+and later ones). This repository is the single source: the product repositories include it as a
+Git submodule (pinned to one version, taken over with `git submodule update --remote`) and link
+to it, so they hold no copies of the logo.
 
 The logo is **not** open source. See [TRADEMARKS.md](TRADEMARKS.md).
 
@@ -17,6 +18,7 @@ The logo is **not** open source. See [TRADEMARKS.md](TRADEMARKS.md).
 | `logo/lgal-plaque.svg` | **The logo.** Round navy plaque with transparent corners; works on light and dark backgrounds. |
 | `logo/lgal-badge.svg` | The same on a navy square with rounded corners: avatars, social images. |
 | `export/*.png` | PNG renderings: plaque 256/512/1024 px, badge 1024 px. |
+| `export/lgal-doser-social.png` | Social preview of the LGAL Doser repository (1280 × 640 px, upload in the GitHub settings). |
 | `source/original.jpg` | The original artwork. |
 | `source/original.png` | The same, decoded losslessly: input of the tools. |
 | `tools/`, `make.sh` | Rebuild the SVG files from the original. |
@@ -68,16 +70,16 @@ only, green = new only).
 ## Social preview of a product repository
 
 ```bash
-.venv/bin/python tools/social.py logo/lgal-plaque.svg "LGAL-Doser" "Open dosing pump|for reef aquariums" social-preview.png
+.venv/bin/python tools/social.py logo/lgal-plaque.svg "LGAL Doser" "Professional smart|open-source dosing pump|for reef aquariums" export/lgal-doser-social.png
 ```
 
-1280 × 640 px; `|` starts a new line. The text uses Montserrat if installed, otherwise Avenir
+`make.sh` runs this as its last step. 1280 × 640 px; `|` starts a new line. The text uses Montserrat if installed, otherwise Avenir
 Next, Helvetica Neue or Arial.
 
 ## Used in
 
 | Repository | Files |
 |---|---|
-| LGAL-Doser | `lgal-plaque.svg` on the sign-in and setup pages of the web UI, dimmed in the background of the web UI and in the README, social preview |
+| LGAL Doser | submodule `brand/`: `lgal-plaque.svg` built into the firmware (sign-in, setup and maintenance pages, dimmed in the background of the web UI); README links to it; `export/lgal-doser-social.png` as social preview |
 
 Copyright © 2026 Lars Greiss / LG Aquatic Life. All rights reserved.
