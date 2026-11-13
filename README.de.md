@@ -9,7 +9,8 @@ Logo und Markendateien von **LG Aquatic Life**, gemeinsam für alle LG-Aquatic-L
 binden es als Git-Submodul ein (auf einen Stand festgelegt, übernommen mit
 `git submodule update --remote`) und verlinken darauf; sie enthalten keine Kopien des Logos.
 
-Das Logo ist **nicht** Open Source. Siehe [TRADEMARKS.de.md](TRADEMARKS.de.md).
+Das Logo ist **nicht** Open Source. Siehe [TRADEMARKS.de.md](TRADEMARKS.de.md). Das gemeinsame
+Web-Design in `web/` ist freie Software unter der GPL (siehe [unten](#gemeinsames-web-design)).
 
 ## Dateien
 
@@ -22,6 +23,7 @@ Das Logo ist **nicht** Open Source. Siehe [TRADEMARKS.de.md](TRADEMARKS.de.md).
 | `source/original.jpg` | Das Original. |
 | `source/original.png` | Dasselbe, verlustfrei dekodiert: Eingabe der Werkzeuge. |
 | `tools/`, `make.sh` | Bauen die SVG-Dateien aus dem Original neu. |
+| `web/` | Das gemeinsame Web-Design der Geräteseiten, siehe [unten](#gemeinsames-web-design). |
 
 ## Regeln
 
@@ -42,6 +44,23 @@ Farben:
 | Türkis | `#3595a2` |
 | Gold | `#d69f31` |
 | Weiß | `#fbfbf9` |
+
+## Gemeinsames Web-Design
+
+Jedes Gerät liefert seine Seiten aus der eigenen Firmware, aber alle sehen gleich aus. Die Teile
+dieses Aussehens liegen hier in `web/`, die Firmware bettet sie beim Bauen ein:
+
+| Datei | Ausgeliefert als | Inhalt |
+|---|---|---|
+| `web/lgal.css` | `/ui/lgal.css` | Farb-Tokens (dunkles Design, helles daneben), Grundstile, Kopfleiste, Karten, Buttons, Formulare, Schalter, Dialoge, das abgedimmte Logo im Hintergrund und die Stile des Riffs. |
+| `web/reef.js` | `/ui/lib/reef.js` | Das Hintergrund-Riff: Korallen, Gorgonien, Seegras und Hirnkorallen in drei Tiefen, im Browser aus einem festen Startwert gezeichnet (jedes Mal dasselbe Bild); Seegras wiegt sich, Blasen steigen auf, aus bei „Bewegung reduzieren“. `drawReef(element)` |
+| `web/flags.js` | `/flags.js` | Runde Flaggen der Sprachen (`window.lgalFlags`) und die Stile der Sprachauswahl (`window.lgalLangCss`). |
+
+Ein Gerät ergänzt nach `lgal.css` seine eigenen Stile (der Doser z. B. die Pumpenfarben) und
+ändert die gemeinsamen nie; eine Änderung hier gilt für jedes Gerät mit seiner nächsten Firmware.
+
+`web/` steht unter der **GNU General Public License v3.0 oder später** ([web/LICENSE](web/LICENSE)),
+wie die Firmware der Geräte. Die Markenregeln für das Logo bleiben unverändert.
 
 ## Wie das Logo entstanden ist
 
@@ -82,6 +101,6 @@ sonst Avenir Next, Helvetica Neue oder Arial.
 
 | Repository | Dateien |
 |---|---|
-| LGAL Doser | Submodul `brand/`: `lgal-plaque.svg` in die Firmware eingebaut (Anmelde-, Einrichtungs- und Wartungsseite, abgedimmt im Hintergrund der Web-UI); das README verlinkt darauf; `export/lgal-doser-social.png` als Vorschaubild |
+| LGAL Doser | Submodul `brand/`: `lgal-plaque.svg` in die Firmware eingebaut (Anmelde- und Einrichtungsseite, abgedimmt im Hintergrund der Web-UI) und `web/` als Design aller seiner Seiten; das README verlinkt auf das Logo; `export/lgal-doser-social.png` als Vorschaubild |
 
-Copyright © 2026 Lars Greiss / LG Aquatic Life. Alle Rechte vorbehalten.
+Copyright © 2026 Lars Greiss / LG Aquatic Life. Alle Rechte vorbehalten, außer `web/` (GPL-3.0-or-later).
