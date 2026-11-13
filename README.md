@@ -9,7 +9,8 @@ and later ones). This repository is the single source: the product repositories 
 Git submodule (pinned to one version, taken over with `git submodule update --remote`) and link
 to it, so they hold no copies of the logo.
 
-The logo is **not** open source. See [TRADEMARKS.md](TRADEMARKS.md).
+The logo is **not** open source. See [TRADEMARKS.md](TRADEMARKS.md). The shared web design in
+`web/` is free software under the GPL (see [below](#shared-web-design)).
 
 ## Files
 
@@ -22,6 +23,7 @@ The logo is **not** open source. See [TRADEMARKS.md](TRADEMARKS.md).
 | `source/original.jpg` | The original artwork. |
 | `source/original.png` | The same, decoded losslessly: input of the tools. |
 | `tools/`, `make.sh` | Rebuild the SVG files from the original. |
+| `web/` | The shared web design of the device pages, see [below](#shared-web-design). |
 
 ## Rules
 
@@ -41,6 +43,23 @@ Colours:
 | Teal | `#3595a2` |
 | Gold | `#d69f31` |
 | White | `#fbfbf9` |
+
+## Shared web design
+
+Every device serves its pages from its own firmware, but they all look the same. The parts of
+that look live here, in `web/`, and the firmware embeds them at build time:
+
+| File | Served as | Content |
+|---|---|---|
+| `web/lgal.css` | `/ui/lgal.css` | Colour tokens (dark theme, light theme alongside), base styles, top bar, cards, buttons, forms, switches, dialogs, the dimmed logo in the background and the styles of the reef. |
+| `web/reef.js` | `/ui/lib/reef.js` | The background reef: corals, sea fans, seaweed and brain corals in three depths, drawn in the browser from a fixed seed (the same picture every time); seaweed sways and bubbles rise, off with "reduce motion". `drawReef(element)` |
+| `web/flags.js` | `/flags.js` | Round flag icons of the languages (`window.lgalFlags`) and the styles of the language picker (`window.lgalLangCss`). |
+
+A device adds its own styles after `lgal.css` (the doser e.g. the pump colours) and never
+changes the shared ones; a change here applies to every device with its next firmware.
+
+`web/` is licensed under the **GNU General Public License v3.0 or later** ([web/LICENSE](web/LICENSE)),
+like the firmware of the devices. The trademark rules for the logo stay as they are.
 
 ## How the logo was made
 
@@ -80,6 +99,6 @@ Next, Helvetica Neue or Arial.
 
 | Repository | Files |
 |---|---|
-| LGAL Doser | submodule `brand/`: `lgal-plaque.svg` built into the firmware (sign-in, setup and maintenance pages, dimmed in the background of the web UI); README links to it; `export/lgal-doser-social.png` as social preview |
+| LGAL Doser | submodule `brand/`: `lgal-plaque.svg` built into the firmware (sign-in and setup pages, dimmed in the background of the web UI) and `web/` as the design of all its pages; README links to the logo; `export/lgal-doser-social.png` as social preview |
 
-Copyright © 2026 Lars Greiss / LG Aquatic Life. All rights reserved.
+Copyright © 2026 Lars Greiss / LG Aquatic Life. All rights reserved, except `web/` (GPL-3.0-or-later).
