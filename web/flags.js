@@ -28,7 +28,7 @@ window.lgalLangCss = `.lgp{position:relative;display:inline-block}
 .lgp-list{position:absolute;right:0;top:calc(100% + 6px);z-index:30;min-width:190px;max-height:min(420px,70vh);overflow-y:auto;padding:6px;
  border:1px solid var(--line,#2c4757);border-radius:14px;background:var(--card);box-shadow:0 12px 32px rgba(0,0,0,.35)}
 .lgp-list[hidden]{display:none}
-.lgp-list button{display:flex;align-items:center;gap:12px;width:100%;margin:0;padding:8px 10px;border:0;border-radius:9px;background:none;
+.lgp-list button{display:flex;align-items:center;justify-content:flex-start;gap:12px;width:100%;margin:0;padding:8px 10px;border:0;border-radius:9px;background:none;
  color:var(--text,var(--fg));font:inherit;font-size:15px;font-weight:500;text-align:left;cursor:pointer}
 .lgp-list button .flag{width:26px;height:26px}
 .lgp-list button:hover{background:color-mix(in srgb,var(--acc) 12%,transparent)}
