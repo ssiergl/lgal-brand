@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Social preview image (1280 x 640, e.g. for GitHub) for one product: plaque, title, subtitle.
 Usage: social.py lgal-plaque.svg "Title" "Subtitle, | starts a new line" out.png"""
 import re

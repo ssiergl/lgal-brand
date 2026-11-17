@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Colour trace of the flattened logo (flat.png -> traced.svg) with vtracer.
 Usage: trace.py flat.png traced.svg"""
 import os, sys, time, vtracer

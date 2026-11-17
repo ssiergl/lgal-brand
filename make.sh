@@ -1,4 +1,7 @@
 #!/bin/sh
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 # Rebuild the logo from source/original.png: tracing and fitting into build/, the finished SVG files
 # into logo/, the PNG exports and the social previews into export/. Needs Python 3.12 (vtracer has no wheels for newer
 # versions yet) with the packages from tools/requirements.txt. Takes a few minutes.

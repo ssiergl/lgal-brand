@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Snap traced paths to the palette, drop navy, scale to 1000 units, split outer ring vs inner.
 Writes JSON: [{"c": colour name, "outer": bool, "d": path data}]"""
 import json

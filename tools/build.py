@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Compose the logo files from the flat parts (flat.json: teal and white areas, exact outer arcs),
 the fish fragment and the gold strokes.
 
@@ -77,7 +80,11 @@ files = {
     "lgal-plaque.svg": svg(disc=True, view=DISC_VIEW, size=512),
     "lgal-badge.svg": svg(bg=NAVY, size=512),
 }
+# the same header as the other files of this repository; outside the <svg> element, so that
+# social.py and the renderers ignore it
+HEADER = ("<!-- SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life -->\n"
+          "<!-- SPDX-License-Identifier: LicenseRef-All-Rights-Reserved -->\n")
 for name, content in files.items():
-    content = compact(content)
+    content = HEADER + compact(content)
     open(f"{out}/{name}", "w").write(content)
     print(f"{name:16} {len(content):7} bytes")

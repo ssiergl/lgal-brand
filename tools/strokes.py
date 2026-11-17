@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Gold lines of the logo as constant-width strokes on smooth centre lines, measured from the original.
 
 Every gold line is one stroke of width W on a fitted centre line: the ring is an exact circle, the two

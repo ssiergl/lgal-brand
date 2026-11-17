@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life -->
+<!-- SPDX-License-Identifier: LicenseRef-All-Rights-Reserved -->
+
 # LG Aquatic Life – Marke
 
 *[English](README.md) · Deutsch*

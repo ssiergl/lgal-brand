@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Cubic Bezier fitting of a point sequence (Schneider, Graphics Gems I)."""
 import numpy as np
 

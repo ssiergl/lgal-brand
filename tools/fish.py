@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Rebuild the puffer fish of the original as SVG: shapes traced per region, shading fitted
 to the original pixels.  Usage: fish.py original.bmp out_fragment.svg debug_dir"""
 import os

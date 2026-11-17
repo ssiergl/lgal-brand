@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Convert the source image to a 24-bit BMP, the input format of the tracing tools.
 Usage: tobmp.py original.png original.bmp"""
 import sys

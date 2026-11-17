@@ -1,3 +1,4 @@
+// SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Language picker assets, shared by the device pages and the web UI
 // (GET /flags.js, no sign-in): window.lgalFlags[code] is a round flag icon

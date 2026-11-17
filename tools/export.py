@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """PNG exports of the logo files (rendered with resvg).
 Usage: export.py logo_dir export_dir"""
 import sys

@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life -->
+<!-- SPDX-License-Identifier: LicenseRef-All-Rights-Reserved -->
+
 # LG Aquatic Life – brand
 
 *English · [Deutsch](README.de.md)*
@@ -102,3 +105,4 @@ Next, Helvetica Neue or Arial.
 | LGAL Doser | submodule `brand/`: `lgal-plaque.svg` built into the firmware (sign-in and setup pages, dimmed in the background of the web UI) and `web/` as the design of all its pages; README links to the logo; `export/lgal-doser-social.png` as social preview |
 
 Copyright © 2026 Lars Greiss / LG Aquatic Life. All rights reserved, except `web/` (GPL-3.0-or-later).
+Each file that can hold a comment says so in an SPDX header (`LicenseRef-All-Rights-Reserved` or `GPL-3.0-or-later`).

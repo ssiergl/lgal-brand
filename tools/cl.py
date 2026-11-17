@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Centre-line helpers on the gold mask (2000 px, K = 2 px per unit)."""
 from collections import deque
 

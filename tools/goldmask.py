@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Gold parts of the original: a binary mask and a continuous "goldness" (0 = navy, 1 = gold) for
 sub-pixel edges. The fish's yellow fin is excluded.
 Usage: goldmask.py original.bmp gold-mask.npy goldness.npy"""

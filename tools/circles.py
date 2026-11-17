@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """Replace the traced outer teal arcs by exact circular arcs with round ends (fitted to the original).
 Usage: circles.py in.json out.json"""
 import json

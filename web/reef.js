@@ -1,3 +1,4 @@
+// SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Background reef: branching corals, sea fans, seaweed and brain corals in
 // three depth layers. Drawn in the browser from a fixed seed, so it looks the

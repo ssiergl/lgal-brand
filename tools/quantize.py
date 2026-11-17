@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Lars Greiss / LG Aquatic Life
+# SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+
 """original.bmp -> flat.png: 4 palette colours, fish blanked, pipette kept (navy).
 Coordinates in logo units (1000 = image width)."""
 import math, struct, sys, zlib
