@@ -17,6 +17,8 @@
   --ok: #3ccf91;
   --warn: #f2b545;
   --err: #ff6b6b;
+  /* red buttons with white text, both themes: the dark theme's --err is too light under white (2.8:1) */
+  --err-fill: #d13030;
   --svc: #a78bfa;
   --water: #1c6e8c;
   --water-hi: #38c6d9;
@@ -193,7 +195,7 @@ button, .btn {
 }
 button:disabled { opacity: .45; cursor: not-allowed; }
 button.sec, .btn.sec { background: transparent; color: var(--text); border-color: var(--line); }
-button.danger { background: var(--err); color: #fff; }
+button.danger { background: var(--err-fill); color: #fff; }
 button.ghost { background: transparent; color: var(--mut); padding: 6px 8px; }
 button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible {
   outline: 2px solid var(--acc); outline-offset: 2px;
