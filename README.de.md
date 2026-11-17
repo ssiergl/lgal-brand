@@ -107,3 +107,5 @@ sonst Avenir Next, Helvetica Neue oder Arial.
 | LGAL Doser | Submodul `brand/`: `lgal-plaque.svg` in die Firmware eingebaut (Anmelde- und Einrichtungsseite, abgedimmt im Hintergrund der Web-UI) und `web/` als Design aller seiner Seiten; das README verlinkt auf das Logo; `export/lgal-doser-social.png` als Vorschaubild |
 
 Copyright © 2026 Lars Greiss / LG Aquatic Life. Alle Rechte vorbehalten, außer `web/` (GPL-3.0-or-later).
+Jede Datei, die einen Kommentar aufnehmen kann, sagt das in einem SPDX-Header (`LicenseRef-All-Rights-Reserved` bzw.
+`GPL-3.0-or-later`).
